@@ -45,7 +45,7 @@ After uploading all the files in S3, simply go to the Cloudfront UI
 2. Choose the S3 bucket name endpoint as the origin domain
 3. Use Origin access control settings for Origin access, and create a new OAC with signing behaviour as `Sign requests`
 4. Add index.html to `Default root object` to specify the file name to redirect to when the viewer requests the root URL (/).
-5. Add this Cloudfront Distribution URL as an `Allowed Origin` in the CORS for [Lambda function URL](https://github.com/ASUCICREPO/image-rekognition-check-in?tab=readme-ov-file#create-the-lambda-function-that-connects-to-the-frontend-and-returns-result)
+5. Add this Cloudfront Distribution URL as an `Allowed Origin` in the CORS for [Lambda function URL](https://github.com/ASUCICREPO/image-rekognition-check-in?tab=readme-ov-file#5-create-the-lambda-function-that-connects-to-the-frontend-and-returns-result)
 
 
 ### 8. Upload image to Image Store S3
