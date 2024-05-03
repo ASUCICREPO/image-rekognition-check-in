@@ -16,6 +16,12 @@ create dynamodb table with face_id as partition key
 doppelganger_image_to_rekognition_dynamodb lambda needs S3 trigger and access to S3 read, rekogniton and dynamodb
 
 
+
+get-recognition-checkin-results upload zip
+give permission to recognition, create function URL, allow access from cloudfront distribution
+
+
+
 - [ ] s3
 - [ ] cloudfront
 - [ ] lambdas - 2 funcs

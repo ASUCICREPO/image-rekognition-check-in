@@ -13,9 +13,7 @@ const SubscribeTopic = '$aws/things/' + ThingName + '/shadow/name/celebrity_dopp
 
 // 3. Click on the Interact menu item, to reveal the API Endpoint:
 // asu-uto-alexa-np
-//const mqttEndpoint   = "a12fxgmrwb3ni8-ats.iot.us-east-1.amazonaws.com";
-// AWS Kevin Acct
-const mqttEndpoint   = "a1u67f376bky5j-ats.iot.us-east-1.amazonaws.com";
+//const mqttEndpoint   = "...-ats.iot.us-east-1.amazonaws.com";
 
 
 // 4. Login to the AWS Cognito console

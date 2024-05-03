@@ -139,7 +139,7 @@
             type: "POST",
             crossDomain: true,
             contentType: "application/json",
-            url: "https://lkzdsfud4z7pl4nxwpvcwopgfy0quhyt.lambda-url.us-west-2.on.aws/",
+            url: "https://{lambda-url}.lambda-url.us-west-2.on.aws/",
             dataType: "json",
             headers: {
               "Content-Type": "application/json",
