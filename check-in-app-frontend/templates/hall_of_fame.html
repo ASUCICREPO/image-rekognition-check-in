@@ -1,0 +1,77 @@
+
+<div class="section row">
+  <div class="col-xs-12 hall_main_title" ng-click="changeShow()">
+    <i class="material-icons smallArr" ng-if="show=='Celebrity Match'">keyboard_arrow_left</i>
+    {{show}}
+    <i class="material-icons smallArr" ng-if="show=='Emotions'">keyboard_arrow_right</i>
+  </div>
+</div>
+
+<div class="section row" ng-if="show=='Emotions'">
+
+  <div class="col-xs-6">
+
+    <div class="col-xs-12 centerItems" ng-repeat="(key,value) in hallOfFame" ng-if="key!='celebrity'&&key!='disgusted'&&key!='angry'&&key!='surprised'">
+      <div class="hall_title">{{key}}</div>
+      <div class="hall_item"  ng-repeat="(index,item) in hallOfFame[key]">
+        <img class="hall_img" src={{item.img}}>
+        <div class="progress my_progressemo">
+          <div class="progress-bar" id="{{item.key}}-bar-{{index}}" style="width:{{item.amount}}%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">{{item.amount}}%</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-xs-6">
+
+    <div class="col-xs-12 centerItems" ng-repeat="(key,value) in hallOfFame" ng-if="key!='celebrity'&&key!='sad'&&key!='happy'&&key!='calm'">
+      <div class="hall_title">{{key}}</div>
+      <div class="hall_item"  ng-repeat="item in hallOfFame[key]">
+        <img class="hall_img" src={{item.img}}>
+        <div class="progress my_progressemo">
+          <div class="progress-bar" id="{{item.key}}-bar-{{index}}" style="width:{{item.amount}}%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">{{item.amount}}%</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- <div class="col-xs-6" ng-repeat="(key,value) in hallOfFame">
+
+    <div class="row centerItems" ng-if="key!='celebrity'">
+      <div class="hall_title">{{key}}</div>
+      <div class="hall_item"  ng-repeat="item in hallOfFame[key]">
+        <img class="hall_img" src={{item.img}}>
+        <div class="progress my_progressemo">
+          <div class="progress-bar" id={{item.barId}} style="width:{{item.amount}}%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">{{item.amount}}%</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div> -->
+
+</div>
+
+<div class="section row" ng-if="show=='Celebrity Match'">
+
+  <div class="col-xs-12"   ng-repeat="item in hallOfFame.celebrity">
+
+    <div class="row centerItems">
+      <div class="hall_celeb_item">
+        <div class="imgCont inlineb">
+          <img class="hall_celeb_my_img" src={{item.img}}>
+          <img class="hall_celeb_img" src={{item.celebImg}}>
+        </div>
+        <!-- <div class="hall_name">{{item.name}}</div> -->
+        <div class="progress my_progresshall">
+          <div class="progress-bar" id={{item.barId}} style="width:{{item.amount}}%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">{{item.amount}}%</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,80 @@
+<div class="section ">
+  <div class="row celebrity">
+    <div class="col-lg-9 text-center image">
+
+      <!-- Video is for Local, autoplay is live feed -->
+      <!-- img is for camera -->
+      <!--- http://10.211.125.147/axis-cgi/mjpg/video.cgi?subtype=1 -->
+      <!-- <video autoplay id="video" width="580" height="380"  ng-click="toggleGame()"></video> -->
+
+      <!--          <canvas id="videoSource"></canvas>-->
+      <!--       <video id="video" src="http://localhost:8181/stream" type="video/ogg; codecs=theora" autoplay="autoplay" width="500" height="500"/>-->
+
+      <!-- <img width="580" height="380" id="cam" src="http://10.211.232.5/snapshot.cgi" style="margin-left:150px"> -->
+      <!-- <img height="380" id="cam" src="http://192.168.1.122/cgi-bin/snapshot.cgi" style="margin-left:150px"> -->
+      <video autoplay id="video" width="100%" class="inlineb" height="380"></video>
+
+      <!-- Person Information -->
+      <div class="card" style="margin:auto">
+        <!-- Name -->
+        <div class="text-center">
+          <h5 class="name" id="name_of_person"></h5>
+        </div>
+        <!-- Title -->
+        <div class="text-center">
+          <div class="dept" id="title_of_person"></div>
+        </div>
+        <!-- Department -->
+        <div class="text-center">
+          <div class="dept" id="department_of_person"></div>
+        </div>
+        <div class="text-center">
+          <div class="matchNum" id="match-bar">
+          </div>
+        </div>
+        <!-- Gender -->
+        <!-- <div class="text-center lineItem">
+          <div id="genderLabel" class="inlineb titleItem" style="display: none;">Gender</div>
+          <div id="gender" class="inlineb actuItem"></div>
+        </div> -->
+        <!-- Age -->
+        <!-- <div class="text-center lineItem">
+          <div id="age_estimateLabel" class="inlineb titleItem" style="display: none;">Age</div>
+          <div id="age_estimate" class="inlineb actuItem"></div>
+        </div> -->
+        <!-- Emotion -->
+        <!-- <div class="text-center lineItem">
+          <div id="emotionLabel" class="inlineb titleItem" style="display: none;">Emotion</div>
+          <div id="emotion" class="inlineb actuItem"></div>
+        </div> -->
+      </div>
+    </div>
+
+    <!-- Loading indicator -->
+    <div class="col-lg-1 text-center image">
+        <!-- <i><h5 class="name" > "You look awesome today!"</h5></i> -->
+        <h4 style="padding-top: 15px">Click the button below to check in!</h4>
+
+        <!-- <h1 style="padding-top: 30px; display: none" id="emotion_label">Emotion</h1>
+        <img src="" style="margin: auto; display: none;" id="emoji" width="150" height="150"></img> -->
+        <img src="img/ellipsis.gif" style="margin: auto; display: none;" id="loader"></img> 
+        <button type="button" id="takepicturebutton" ng-click="takepicturebuttonfunc()">Click here</button>
+    </div>
+
+    <!-- Celeb Info
+    <div id="celebrity" class="col-lg-5 text-center image">
+      <img src="img/CIC_Assets-02.png" style="height:420px; widht:580px !important" id="celebrity"></img>
+
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h3 class="name fixMarginTop" id="name"></h3>
+        </div>
+        <div class="col-md-12">
+          <div class="matchNum" id="match-bar">
+          </div>
+        </div>
+      </div>
+
+    </div> -->
+  </div>
+</div>

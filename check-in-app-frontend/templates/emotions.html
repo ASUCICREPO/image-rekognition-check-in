@@ -1,0 +1,96 @@
+<div class="section " elem-ready="initImages()">
+  <div class="row celebrity">
+    <div class="col-lg-6 text-center addSpacing">
+
+      <!--- http://10.211.125.147/axis-cgi/mjpg/video.cgi?subtype=1 -->
+      <video autoplay id="video" width="580" class="inlineb" height="380"></video>
+      <!-- <img crossOrigin="anonymous" id="video" src="http://10.211.125.239/axis-cgi/mjpg/video.cgi?subtype=1 " width="580" height="380"> -->
+
+      <div class="emotion" id="emotion"></div>
+
+      <div class="emoBtns">
+        <div class="iconHolder">
+          <i class="material-icons myicon" ng-click="takePicture()">camera</i>
+        </div>
+        <div class="iconHolder">
+          <i class="material-icons myicon" id="runBtn" ng-click="auto_run()">play_circle_outline</i>
+        </div>
+        <div class="iconHolder">
+          <i class="material-icons myicon" ng-click="resetgame()">replay</i>
+        </div>
+      </div>
+
+      <!-- <div class="takepic clickbtn inlineb" ng-click="takePicture()">Take Picture</div>
+      <div class="autorun clickbtn inlineb" id="runBtn" ng-click="auto_run()">Auto Run</div>
+      <div class="reset clickbtnlarge inlineb" ng-click="resetgame()">Reset Game</div> -->
+
+      <div class="dots inlineb dotsHide" id="mydots">
+        Analyzing
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+
+    <div class="col-xs-3 addSpacing">
+      <div class="col-lg-12 text-center force_width">
+        <div class="imgTitle">Sad</div>
+        <img src="img/question.png" id="sadImg" class="stillImg inlineb">
+        <div class="progress my_progressemo">
+          <div class="progress-bar" id="sad-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+
+      <div class="col-lg-12 text-center force_width">
+        <div class="imgTitle">Happy</div>
+        <img src="img/question.png" id="happyImg" class="stillImg">
+        <!-- <div class="percentShow" id="happy-bar">
+
+        </div> -->
+        <div class="progress my_progressemo">
+          <div class="progress-bar" id="happy-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+
+      <div class="col-lg-12 text-center force_width">
+        <div class="imgTitle">Calm</div>
+        <img src="img/question.png" id="calmImg" class="stillImg">
+        <div class="progress my_progressemo">
+          <div class="progress-bar" id="calm-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3 addSpacing">
+      <div class="col-lg-12 text-center force_width">
+        <div class="imgTitle">Disgusted</div>
+        <img src="img/question.png" id="disgustedImg" class="stillImg inlineb">
+        <div class="progress my_progressemo">
+          <div class="progress-bar" id="disgusted-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+
+      <div class="col-lg-12 text-center force_width">
+        <div class="imgTitle">Angry</div>
+        <img src="img/question.png" id="angryImg" class="stillImg">
+        <div class="progress my_progressemo">
+          <div class="progress-bar" id="angry-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+
+      <div class="col-lg-12 text-center force_width">
+        <div class="imgTitle">Surprised</div>
+        <img src="img/question.png" id="surprisedImg" class="stillImg">
+        <div class="progress my_progressemo">
+          <div class="progress-bar" id="surprised-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+  </div>
+
+</div>
