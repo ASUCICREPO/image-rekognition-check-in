@@ -65,7 +65,7 @@ Sr. Solutions Architect, AWS:
 General Manager, ASU: 
     [Ryan Hendrix](https://www.linkedin.com/in/ryanahendrix/)
 
-This project is designed and developed with guidance and support from the [ASU Cloud Innovation Center](https://smartchallenges.asu.edu).
+This project draws significant inspiration from the Celebrity Doppelganger concept, leveraging its existing codebase as a foundation. Building upon this framework, our team seeks to enhance and expand its capabilities with guidance and support from the [ASU Cloud Innovation Center](https://smartchallenges.asu.edu).
 
 ---------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------
