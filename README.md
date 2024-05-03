@@ -51,3 +51,22 @@ After uploading all the files in S3, simply go to the Cloudfront UI
 ### Upload image to Image Store S3
 The object key of the image added to S3 should be noted and an entry should be made in the “asu_celebs.py” file in get-recognition-checking-results Lambda function with the same key as ID.
 
+
+
+
+## Credits
+
+Developer: 
+    [Anjali Srivastava](https://www.linkedin.com/in/anjalisrivastava/)
+
+Sr. Solutions Architect, AWS:
+    [Arun Arunachalam](https://www.linkedin.com/in/arunarunachalam/)
+
+General Manager, ASU: 
+    [Ryan Hendrix](https://www.linkedin.com/in/ryanahendrix/)
+
+This project is designed and developed with guidance and support from the [ASU Cloud Innovation Center](https://smartchallenges.asu.edu).
+
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
