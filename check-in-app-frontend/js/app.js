@@ -517,14 +517,11 @@
         name = "";
         $.ajax({
           type: "POST",
-          //url: "https://h2h2c0e7p9.execute-api.us-west-2.amazonaws.com/beta/imageinfo",
-          url: "https://0lwnrplnb5.execute-api.us-west-2.amazonaws.com/beta/imageInfoRetriver_new",
+          url: "https://{API}.us-west-2.amazonaws.com/beta/imageInfoRetriver_new",
           dataType: "json",
           headers: {
             "Content-Type": "application/json"
           },
-          //-"x-api-key" : "DAwwV4M2Qh60Fd8lYTA0x7sacLjtKwAn38XJm6in"},
-          //"x-api-key" : "h4ANNxg5AA5PpYMxu3QZg7t8C9St6KKI9rZPmrQT"},
           data: JSON.stringify({
             "image": image_base64_global.replace("data:image/jpeg;base64,", "")
           }),

@@ -32,5 +32,4 @@ const SubscribeTopic = '$aws/things/' + ThingName + '/shadow/name/celebrity_dopp
 
 // Cognito Identity Pool ID
 // asu-uto-alexa-np
-//const IdentityPoolId = 'us-east-1:860943b0-10dd-4a02-a805-9a7fe4cefd29';
-const IdentityPoolId = 'us-west-2:901abca2-52a8-49c9-994e-fa3daa77fbba';
+const IdentityPoolId = 'us-west-2:{identity pool}';
