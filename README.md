@@ -15,24 +15,39 @@ The system verifies the existence of the detected face within the database. If a
 3. DynamoDB Table - A table used to match the face ID returned from Rekognition to its corresponding ID stored in database. The primary partition key of the table is "face_id".
 4. Rekognition Collection : A collection of database faces mapped by Amazon Rekognition
 5. Lambda Functions
-    - doppelganger_image_to_rekognition_dynamodb : Lambda function with an S3 trigger on whenever an image is added to the Image store S3 bucket. This adds the image to the Rekognition collection and the DynamoDB table. The object key of the image added to S3 should match the ID in the entry made in the “asu_celebs.py” file in get-recognition-checkin-results Lambda function. The function should also have access to Rekognition, Dynamodb and to read S3. The `doppelganger_image_to_rekognition_dynamodb` folder contains the code
-    - get-recognition-checkin-results: Lambda function with a function URL that is accessed by the Cloudfront distribution(web application) and returns the results to the application. The function should also have access to Rekognition, and its function URL should be created and Cloudfront distribution should be granted the CORS access to the Lambda function URL. The `get-recognition-checkin-results` folder stores the entire code that should be uploaded as zip
+    - doppelganger_image_to_rekognition_dynamodb : Lambda function with an S3 trigger on whenever an image is added to the Image store S3 bucket. This adds the image to the Rekognition collection and the DynamoDB table. 
+    - get-recognition-checkin-results: Lambda function with a function URL that is accessed by the Cloudfront distribution(web application) and returns the results to the application. 
 
 
 ## Steps to follow when setting up the system
-After uploading the files in S3, simply go to the Cloudfront UI
+
+### Create Rekognition collection 
+Create a new collection in Rekognition through CLI or re-use code in `create-rekognition-collection` folder
+
+### Create DynamoDB table
+Assign face_id as partition key
+
+### Create the Image Store S3 bucket
+
+### Create the Lambda function that gets triggered by the Image store
+The `doppelganger_image_to_rekognition_dynamodb` folder contains the code. Create an S3 trigger connected to the bucket above with the 'Create' event being monitored. The function should also have access to Rekognition, Dynamodb and to read S3. 
+
+
+### Create the Lambda function that connects to the frontend and returns result
+The `get-recognition-checkin-results` folder stores the entire code that should be uploaded as zip. Create function URL for the Lambda. The function should also have access to Rekognition, and its function URL should be created granting CORS access to the Cloudfront distribution. 
+
+### Create front-end
+The `check-in-app-frontend` contains the entire application frontend code. Update the Lambda function URL in `/js/app.js`.
+
+### Create Cloudfront distribution
+After uploading all the files in S3, simply go to the Cloudfront UI
 1. Create distribution
 2. Choose the S3 bucket name endpoint as the origin domain
 3. Use Origin access control settings for Origin access, and create a new OAC with signing behaviour as `Sign requests`
-
-image-rekognition-checkin-image-store s3 bucket
-create collection
-create dynamodb table with face_id as partition key
+4. Add index.html to `Default root object` to specify the file name to redirect to when the viewer requests the root URL (/).
+5. Add this Cloudfront Distribution URL as an `Allowed Origin` in the CORS for [Lambda function URL] (#Create the Lambda function that connects to the frontend and returns result)
 
 
-
-get-recognition-checkin-results upload zip
-give permission to recognition, create function URL, allow access from cloudfront distribution
-
-
+### Upload image to Image Store S3
+The object key of the image added to S3 should be noted and an entry should be made in the “asu_celebs.py” file in get-recognition-checking-results Lambda function with the same key as ID.
 
